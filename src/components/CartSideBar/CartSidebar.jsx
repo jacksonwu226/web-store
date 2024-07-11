@@ -32,6 +32,12 @@ export default function CartSidebar(){
             <FiTrash2 />
           </div>
         </div>
+        <Link className="bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium hover:bg-gray-200/70 transition duration-300">
+          View Cart
+        </Link>
+        <Link className="bg-primary flex p-4 justify-center items-center text-white w-full font-medium hover:bg-primary/70 transition duration-300">
+          Checkout
+        </Link>
       </div>
     </div>
   );

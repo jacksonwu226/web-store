@@ -14,7 +14,7 @@ import Product from './components/Product/Product';
 import CartSidebar from './components/CartSideBar/CartSidebar';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
-
+import './index.css';
 
 const router = createBrowserRouter([
   {

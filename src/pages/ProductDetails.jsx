@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ProductDetails() {
+export default function ProductDetails() {
   return(
     <div>Homepage</div>
   );

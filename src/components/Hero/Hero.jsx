@@ -21,8 +21,8 @@ export default function Hero(){
             Discover More
           </Link>
         </div>
-        <div className="hidden lg:flex">
-          <img className="object-cover max-w-full max-h-full" src={modelImageAnime} alt="" />
+        <div className="hidden lg:flex flex-col justify-end">
+          <img className="object-cover max-w-full h-3/4" src={modelImageAnime} alt="" />
         </div>
       </div>
     </section>

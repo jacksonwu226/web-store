@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
 
 import Product from './components/Product/Product';
-import Sidebar from './components/Sidebar/Sidebar';
+import CartSidebar from './components/CartSideBar/CartSidebar';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
@@ -26,7 +26,7 @@ function App() {
     <div className="app">
       <Header />
       <RouterProvider router={router} />
-      <Sidebar />
+      <CartSidebar />
       <Footer />
     </div>
   )

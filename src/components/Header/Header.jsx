@@ -11,7 +11,7 @@ export default function Header() {
   const {itemAmount} = useContext(CartContext);
   useEffect(() => {
     window.addEventListener('scroll', ()=>{
-      window.scrollY > 60 ? setIsActive(true) : setIsActive(false);
+      window.scrollY > 40 ? setIsActive(true) : setIsActive(false);
     });
   });
   return (

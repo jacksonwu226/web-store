@@ -27,7 +27,7 @@ export default function CartSummary() {
           <div className="mt-8">
             <div className="flex justify-between items-center border-t pt-4">
               <h2 className="text-xl font-semibold">Total:</h2>
-              <span className="text-xl font-semibold">{parseFloat(total).toFixed(2)}</span>
+              <span className="text-xl font-semibold">$ {parseFloat(total).toFixed(2)}</span>
             </div>
             <div className="flex justify-end gap-4 mt-4">
               <button 

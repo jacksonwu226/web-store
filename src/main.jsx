@@ -5,15 +5,12 @@ import './index.css'
 import ProductProvider from './contexts/ProductContext'
 import CartSidebarProvider from './contexts/CartSidebarContext'
 import CartProvider from './contexts/CartContext'
+import CategoriesSidebarProvider from './contexts/CategoriesSidebarContext.jsx'
 import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom';
 
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
-
-import Product from './components/Product/Product';
-import CartSidebar from './components/CartSideBar/CartSidebar';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Category from './pages/Category.jsx'
 import './index.css';
 
 const router = createBrowserRouter([
@@ -22,20 +19,22 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {index: true, element: <Home />},
-      {path: '/product/:id', element: <ProductDetails />}
+      {path: '/product/:id', element: <ProductDetails />},
+      {path: '/category/:category', element: <Category />},
     ],
   },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-
-    <CartSidebarProvider>
-      <CartProvider>
-        <ProductProvider>
-          <RouterProvider router={router} />
-        </ProductProvider>
-      </CartProvider>
-    </CartSidebarProvider>
+    <CategoriesSidebarProvider>
+      <CartSidebarProvider>
+        <CartProvider>
+          <ProductProvider>
+            <RouterProvider router={router} />
+          </ProductProvider>
+        </CartProvider>
+      </CartSidebarProvider>
+    </CategoriesSidebarProvider>
   </React.StrictMode>,
 )

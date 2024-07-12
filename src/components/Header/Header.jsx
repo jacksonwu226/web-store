@@ -2,12 +2,15 @@ import React, {useState, useContext, useEffect} from "react";
 import { Link } from "react-router-dom";
 import { CartSidebarContext } from "../../contexts/CartSidebarContext";
 import { BsBag } from "react-icons/bs";
+import { IoMenu } from "react-icons/io5";
+import { CategoriesSidebarContext } from "../../contexts/CategoriesSidebarContext";
 import { CartContext } from "../../contexts/CartContext";
 import Logo from "../../assets/logo/svg/fake-store-high-resolution-logo-black-transparent.png"
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);
-  const {isOpen, setIsOpen} = useContext(CartSidebarContext);
+  const {isOpen: isCartSidebarOpen, setIsOpen: setCartSidebarOpen} = useContext(CartSidebarContext);
+  const {isOpen: isCategoriesSidebarOpen, setIsOpen: setCategoriesSidebarOpen} = useContext(CategoriesSidebarContext);
   const {itemAmount} = useContext(CartContext);
   useEffect(() => {
     window.addEventListener('scroll', ()=>{
@@ -16,7 +19,12 @@ export default function Header() {
   });
   return (
     <header className={`${isActive ? 'bg-white py-4 shadow-md' : 'bg-none py-6' } fixed w-full z-10 transition-all`}>
+
       <div className="container mx-auto flex items-center justify-between h-full">
+        {/* menu */}
+        <div onClick={() => setCategoriesSidebarOpen(!isCategoriesSidebarOpen)} className="cursor-pointer flex relative">
+          <IoMenu className="text-3xl"/>
+        </div>
         <Link to={'/'}>
           <div>
             {/* 40px */}
@@ -24,7 +32,7 @@ export default function Header() {
           </div>
         </Link>
         {/* carts */}
-        <div onClick={() => setIsOpen(!isOpen)} className="cursor-pointer flex relative">
+        <div onClick={() => setCartSidebarOpen(!isCartSidebarOpen)} className="cursor-pointer flex relative">
           {/* 2xl */}
           <BsBag className="text-3xl"/>
           <div className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">{itemAmount}</div>

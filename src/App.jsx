@@ -10,6 +10,7 @@ import Product from './components/Product/Product';
 import CartSidebar from './components/CartSideBar/CartSidebar';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import CategoriesSidebar from './components/CategoriesSidebar/CategoriesSidebar';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <div className="app">
       <Header />
       <Outlet />
+      <CategoriesSidebar />
       <CartSidebar />
       <Footer />
     </div>

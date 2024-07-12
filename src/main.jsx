@@ -14,6 +14,7 @@ import Category from './pages/Category.jsx'
 import './index.css';
 import CartSummary from './pages/CartSummary.jsx'
 import Checkout from './pages/Checkout.jsx'
+import OrderComplete from './pages/OrderComplete.jsx'
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,8 @@ const router = createBrowserRouter([
       {path: '/product/:id', element: <ProductDetails />},
       {path: '/category/:category', element: <Category />},
       {path: '/cart-summary', element: <CartSummary />},
-      {path: '/checkout', element: <Checkout />}
+      {path: '/checkout', element: <Checkout />},
+      {path: '/order-complete', element: <OrderComplete />}
     ],
   },
 ]);

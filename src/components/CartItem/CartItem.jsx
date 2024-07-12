@@ -21,7 +21,7 @@ export default function CartItem({item}){
               {title}
             </Link>
             <div onClick={() => removeFromCart(id)} className="text-xl cursor-pointer">
-              <IoMdClose className="text-gray-500 hover:text-red-500 transition duration-300"/>
+              <IoMdClose className="text-gray-500 hover:text-black transition duration-300"/>
             </div>
           </div>
           <div className= "flex gap-x-2 h-[36px] text-sm">

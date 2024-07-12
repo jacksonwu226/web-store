@@ -23,7 +23,7 @@ export default function Header() {
       <div className="container mx-auto flex items-center justify-between h-full">
         {/* menu */}
         <div onClick={() => setCategoriesSidebarOpen(!isCategoriesSidebarOpen)} className="cursor-pointer flex relative">
-          <IoMenu className="text-3xl"/>
+          <IoMenu className="text-2xl"/>
         </div>
         <Link to={'/'}>
           <div>
@@ -34,7 +34,7 @@ export default function Header() {
         {/* carts */}
         <div onClick={() => setCartSidebarOpen(!isCartSidebarOpen)} className="cursor-pointer flex relative">
           {/* 2xl */}
-          <BsBag className="text-3xl"/>
+          <BsBag className="text-2xl"/>
           <div className="bg-winter-blue-dark absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">{itemAmount}</div>
         </div>
       </div>

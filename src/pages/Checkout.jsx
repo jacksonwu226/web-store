@@ -1,7 +1,8 @@
 import React, { useContext, useState } from "react";
 import { CartContext } from "../contexts/CartContext";
+import { useNavigate } from "react-router-dom";
 export default function Checkout() {
-  const { cart, total } = useContext(CartContext);
+  const { cart, total, clearCart } = useContext(CartContext);
   const [formData, setFormData] = useState({
     name: '',
     address: '',
@@ -13,6 +14,7 @@ export default function Checkout() {
     expiryDate: '',
     cvv: ''
   });
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -21,7 +23,8 @@ export default function Checkout() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Process checkout here
-    console.log('Checkout data:', formData);
+    navigate('/order-complete', {state: {formData: formData, cart: cart, total: total}});
+    clearCart();
   };
 
   return (
@@ -29,7 +32,7 @@ export default function Checkout() {
       <h1 className="text-2xl font-bold mb-6">Checkout</h1>
       <div className="mb-8">
         {cart.map((item) => (
-          <div key={item.id} className="flex justify-between border-b py-2">
+          <div key={item.id} className="flex justify-between py-2">
             <span>{item.title}</span>
             <span>${parseFloat(item.price).toFixed(2)}</span>
           </div>
@@ -149,9 +152,9 @@ export default function Checkout() {
             />
           </div>
         </div>
-        <button type="submit" className="bg-primary text-white py-2 px-4 rounded hover:bg-primary/70 transition duration-300">
-          Place Order
-        </button>
+          <button type="submit" className="bg-primary text-white py-2 px-4 rounded hover:bg-primary/70 transition duration-300">
+            Place Order
+          </button>
       </form>
     </div>
   );

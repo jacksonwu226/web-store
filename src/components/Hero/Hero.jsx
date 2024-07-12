@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Hero(){
   return (
     <section className= "bg-winter-blue h-[800px] bg-no-repeat bg-cover bg-center shadow-md" style={{ backgroundImage: `url(${heroBackground})`, height: '800px' }}>
-      <div className="container mx-auto flex justify-around h-full ">
+      <div className="container mx-auto flex justify-around h-full">
         <div className="flex flex-col justify-center">
           <div className="font-semibold flex items-center uppercase">
             <div className="w-10 h-[3px] bg-red-500 mr-3"></div>
@@ -22,7 +22,7 @@ export default function Hero(){
             Discover More
           </Link>
         </div>
-        <div className="hidden lg:flex flex-col justify-end">
+        <div className="hidden lg:flex flex-col justify-end h-full">
           <img className="object-cover max-w-full h-3/4" src={modelImageAnime} alt="" />
         </div>
       </div>

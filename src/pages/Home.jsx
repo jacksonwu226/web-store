@@ -2,12 +2,17 @@ import React, {useContext} from "react";
 import {ProductContext} from "../contexts/ProductContext"
 import Product from "../components/Product/Product";
 import Hero from "../components/Hero/Hero";
-
+import LoadingScreen from "../components/Loading/Loading";
 export default function Home() {
-  const {products} = useContext(ProductContext);
+  const {products, loading} = useContext(ProductContext);
   const filteredProducts = products.filter(item => {
     return item.category === "women's clothing"
   })
+
+  if (loading) {
+    return <LoadingScreen />; // Show loading screen while products are being fetched
+  }
+
   return (
     <div>
       <Hero />

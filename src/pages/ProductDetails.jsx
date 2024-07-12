@@ -19,7 +19,7 @@ export default function ProductDetails() {
     return (
       <div className="container mx-auto p-8 pt-32 flex flex-col justify-center items-center">
         <h1 className="text-2xl font-bold mb-6">Product Not Found</h1>
-        <p className="text-red-600">Sorry, we couldn't find the product you were looking for.</p>
+        <p className="text-winter-blue-dark">Sorry, we couldn't find the product you were looking for.</p>
       </div>
     );
   }

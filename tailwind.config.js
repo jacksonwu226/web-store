@@ -21,6 +21,9 @@ export default {
       colors: {
         primary: '#222222',
         secondary: '#F5E6E0',
+        'winter-blue': '#BBE9FF',
+        tan : '#FFE9D0',
+        'winter-blue-dark' : '#194569'
       },
       backgroundImage: {
         hero: "url('./src/assets/hero/snow.svg')",

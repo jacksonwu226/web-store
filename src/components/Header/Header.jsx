@@ -35,7 +35,7 @@ export default function Header() {
         <div onClick={() => setCartSidebarOpen(!isCartSidebarOpen)} className="cursor-pointer flex relative">
           {/* 2xl */}
           <BsBag className="text-3xl"/>
-          <div className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">{itemAmount}</div>
+          <div className="bg-winter-blue-dark absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px] text-white rounded-full flex justify-center items-center">{itemAmount}</div>
         </div>
       </div>
     </header>

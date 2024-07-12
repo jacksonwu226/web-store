@@ -28,14 +28,14 @@ export default function CartSidebar(){
           <div className="uppercase font-semibold">
             <span className="mr-2">Total:</span> {parseFloat(total).toFixed(2)}
           </div>
-          <div onClick={clearCart} className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl">
+          <div onClick={clearCart} className="cursor-pointer py-4 bg-winter-blue-dark hover:bg-winter-blue-dark/70 transition duration-300 text-white w-12 h-12 flex justify-center items-center text-xl">
             <FiTrash2 />
           </div>
         </div>
-        <Link className="bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium hover:bg-gray-200/70 transition duration-300">
+        <Link to={`/cart-summary`} onClick={handleClose} className="bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium hover:bg-gray-200/70 transition duration-300">
           View Cart
         </Link>
-        <Link className="bg-primary flex p-4 justify-center items-center text-white w-full font-medium hover:bg-primary/70 transition duration-300">
+        <Link to={`/checkout`} onClick={handleClose} className="bg-primary flex p-4 justify-center items-center text-white w-full font-medium hover:bg-primary/70 transition duration-300">
           Checkout
         </Link>
       </div>

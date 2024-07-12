@@ -15,11 +15,13 @@ import './index.css';
 import CartSummary from './pages/CartSummary.jsx'
 import Checkout from './pages/Checkout.jsx'
 import OrderComplete from './pages/OrderComplete.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 
 const router = createBrowserRouter([
   {
     path: '/',
     element: <App />,
+    errorElement: <ErrorPage />,
     children: [
       {index: true, element: <Home />},
       {path: '/product/:id', element: <ProductDetails />},

@@ -22,7 +22,6 @@ export default function Checkout() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Process checkout here
     navigate('/order-complete', {state: {formData: formData, cart: cart, total: total}});
     clearCart();
   };

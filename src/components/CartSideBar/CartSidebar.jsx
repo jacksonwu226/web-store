@@ -35,9 +35,14 @@ export default function CartSidebar(){
         <Link to={`/cart-summary`} onClick={handleClose} className="bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium hover:bg-gray-200/70 transition duration-300">
           View Cart
         </Link>
-        <Link to={`/checkout`} onClick={handleClose} className="bg-primary flex p-4 justify-center items-center text-white w-full font-medium hover:bg-primary/70 transition duration-300">
-          Checkout
-        </Link>
+        {(cart.length > 0) ? 
+          <Link to={`/checkout`} onClick={handleClose} className="bg-primary flex p-4 justify-center items-center text-white w-full font-medium hover:bg-primary/70 transition duration-300">
+            Checkout
+          </Link>
+        :
+          <span className="bg-primary/40 flex p-4 justify-center items-center text-gray-700 w-full font-medium cursor-not-allowed">
+            Checkout
+          </span>}
       </div>
     </div>
   );

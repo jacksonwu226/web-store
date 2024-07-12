@@ -1,11 +1,12 @@
 import React from "react";
 import modelImageAnime from "../../assets/hero/hero-woman-anime.png"
 import modelImage from "../../assets/hero/hero-woman-winter.png"
+import heroBackground from '../../assets/hero/snow.svg'
 import { Link } from "react-router-dom";
 
 export default function Hero(){
   return (
-    <section className= "bg-winter-blue h-[800px] bg-hero bg-no-repeat bg-cover bg-center shadow-md">
+    <section className= "bg-winter-blue h-[800px] bg-no-repeat bg-cover bg-center shadow-md" style={{ backgroundImage: `url(${heroBackground})`, height: '800px' }}>
       <div className="container mx-auto flex justify-around h-full ">
         <div className="flex flex-col justify-center">
           <div className="font-semibold flex items-center uppercase">

@@ -5,7 +5,7 @@ import { BsBag } from "react-icons/bs";
 import { IoMenu } from "react-icons/io5";
 import { CategoriesSidebarContext } from "../../contexts/CategoriesSidebarContext";
 import { CartContext } from "../../contexts/CartContext";
-import Logo from "../../assets/logo/svg/fake-store-high-resolution-logo-black-transparent.png"
+import Logo from "../../assets/logo/png/fake-store-high-resolution-logo-black-transparent.png"
 
 export default function Header() {
   const [isActive, setIsActive] = useState(false);

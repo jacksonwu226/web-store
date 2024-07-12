@@ -26,7 +26,7 @@ export default function CartSidebar(){
       <div className=" flex flex-col gap-y-3 py-4 mt-4">
         <div className="flex w-full justify-between items-center">
           <div className="uppercase font-semibold">
-            <span className="mr-2">Total:</span> {parseFloat(total).toFixed(2)}
+            <span className="mr-2">Total:</span> $ {parseFloat(total).toFixed(2)}
           </div>
           <div onClick={clearCart} className="cursor-pointer py-4 bg-winter-blue-dark hover:bg-winter-blue-dark/70 transition duration-300 text-white w-12 h-12 flex justify-center items-center text-xl">
             <FiTrash2 />
